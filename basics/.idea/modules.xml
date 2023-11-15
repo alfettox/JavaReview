@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ABeginning/ABeginning.iml" filepath="$PROJECT_DIR$/ABeginning/ABeginning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABeginning/ProjectGutemberg/ProjectGutemberg.iml" filepath="$PROJECT_DIR$/ABeginning/ProjectGutemberg/ProjectGutemberg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABeginning/Scanner/Scanner.iml" filepath="$PROJECT_DIR$/ABeginning/Scanner/Scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basics.iml" filepath="$PROJECT_DIR$/basics.iml" />
+    </modules>
+  </component>
+</project>
