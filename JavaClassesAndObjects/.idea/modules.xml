@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Classes1/DogRanking.iml" filepath="$PROJECT_DIR$/Classes1/DogRanking.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaClassesAndObjects.iml" filepath="$PROJECT_DIR$/JavaClassesAndObjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShapesAndPerimeters/ShapesAndPerimeters.iml" filepath="$PROJECT_DIR$/ShapesAndPerimeters/ShapesAndPerimeters.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimpleCalculator/SimpleCalculator.iml" filepath="$PROJECT_DIR$/SimpleCalculator/SimpleCalculator.iml" />
     </modules>
   </component>
