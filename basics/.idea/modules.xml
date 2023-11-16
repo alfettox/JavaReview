@@ -3,13 +3,23 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ABeginning/ABeginning.iml" filepath="$PROJECT_DIR$/ABeginning/ABeginning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArraysPractice/ArraysPractice.iml" filepath="$PROJECT_DIR$/ArraysPractice/ArraysPractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/ABeginning/Booleans/Booleans.iml" filepath="$PROJECT_DIR$/ABeginning/Booleans/Booleans.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExerciseBasics/ExerciseBasics.iml" filepath="$PROJECT_DIR$/ExerciseBasics/ExerciseBasics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fors/FizzBuzz/FizzBuzz.iml" filepath="$PROJECT_DIR$/Fors/FizzBuzz/FizzBuzz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fors/Fors.iml" filepath="$PROJECT_DIR$/Fors/Fors.iml" />
       <module fileurl="file://$PROJECT_DIR$/LlamasWhalesAndDodosOhMy/IfPractice.iml" filepath="$PROJECT_DIR$/LlamasWhalesAndDodosOhMy/IfPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InterestCalculator/InterestCalculator.iml" filepath="$PROJECT_DIR$/InterestCalculator/InterestCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArraysPractice/MergeArrays/MergeArrays.iml" filepath="$PROJECT_DIR$/ArraysPractice/MergeArrays/MergeArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Methods/MethodToTheMadness/MethodToTheMadness.iml" filepath="$PROJECT_DIR$/Methods/MethodToTheMadness/MethodToTheMadness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Methods/Methods.iml" filepath="$PROJECT_DIR$/Methods/Methods.iml" />
       <module fileurl="file://$PROJECT_DIR$/MiniZork/MiniZork.iml" filepath="$PROJECT_DIR$/MiniZork/MiniZork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Opinionator/Opinionator.iml" filepath="$PROJECT_DIR$/Opinionator/Opinionator.iml" />
       <module fileurl="file://$PROJECT_DIR$/ABeginning/ProjectGutemberg/ProjectGutemberg.iml" filepath="$PROJECT_DIR$/ABeginning/ProjectGutemberg/ProjectGutemberg.iml" />
       <module fileurl="file://$PROJECT_DIR$/RandomObj/RandomObj.iml" filepath="$PROJECT_DIR$/RandomObj/RandomObj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RandomObj/RandomPractice/RandomPractice.iml" filepath="$PROJECT_DIR$/RandomObj/RandomPractice/RandomPractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/ABeginning/Scanner/Scanner.iml" filepath="$PROJECT_DIR$/ABeginning/Scanner/Scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WhileEx/WhileEx.iml" filepath="$PROJECT_DIR$/WhileEx/WhileEx.iml" />
       <module fileurl="file://$PROJECT_DIR$/basics.iml" filepath="$PROJECT_DIR$/basics.iml" />
     </modules>
   </component>
