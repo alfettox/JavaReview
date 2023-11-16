@@ -1,56 +1,112 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
 public class Main {
-    private static Employee employee;
-    private static Workweek workweek;
+    private static Map<Integer, Employee> employeesMap = new HashMap<>();
+    private static int lastID = 0;
 
     public static void main(String[] args) {
-        employee = new Employee("Mario", 35);
-        workweek = new Workweek();
+        addEmployee("Mario", 35);
+        addEmployee("Pera", 46);
 
-        employee = new Employee("Pera", 46);
+        setWorkweek(1, 45);
+        setWorkweek(2, 35);
 
-        setWorkweek(45);
+        // Add a new week for existing employees
+        addNewWeek(1, 30);
+        addNewWeek(2, 40);
 
-        System.out.println(workweek);
+        for (Employee emp : employeesMap.values()) {
+            System.out.println(emp.getWorkweekDetails());
+        }
     }
 
-    private static void setWorkweek(int totalHours) {
-         workweek.setHours(totalHours);
+    private static void addEmployee(String name, int hourlySalary) {
+        lastID++;
+        employeesMap.put(lastID, new Employee(lastID, name, hourlySalary));
     }
 
-    private static class Workweek {
-        int hours;
-        int overtime;
-        int overtimeMultFactor = 2;
-
-        public void setHours(int totalHours) {
-            if (totalHours > 40) {
-                this.hours = 40;
-                this.overtime = totalHours - 40;
-            } else {
-                this.hours = totalHours;
-                this.overtime = 0;
-            }
+    private static void setWorkweek(int employeeId, int totalHours) {
+        Employee employee = employeesMap.get(employeeId);
+        if (employee != null) {
+            employee.addWorkweek(totalHours);
         }
+    }
 
-        public double calculateSalary(Employee employee) {
-            return (hours * employee.hourlySalary +
-                    overtimeMultFactor * overtime * employee.hourlySalary);
-        }
-
-        public String toString(){
-            return "- "+ employee.name + ", normal hours : " + workweek.hours +
-                    " overtime: " + workweek.overtime + " total salary: + " +
-                    workweek.calculateSalary(employee) ;
+    private static void addNewWeek(int employeeId, int totalHours) {
+        Employee employee = employeesMap.get(employeeId);
+        if (employee != null) {
+            employee.addNewWeek(totalHours);
         }
     }
 
     private static class Employee {
+        int id;
         String name = "unknown";
         double hourlySalary = 14.25;
+        private List<Workweek> workweeks;
 
-        public Employee(String name, int hourlySalary) {
+        public Employee(int id, String name, int hourlySalary) {
+            this.id = id;
             this.name = name;
             this.hourlySalary = hourlySalary;
+            this.workweeks = new ArrayList<>();
+        }
+
+        public void addWorkweek(int totalHours) {
+            Workweek newWorkweek = new Workweek();
+            newWorkweek.addHours(totalHours);
+            workweeks.add(newWorkweek);
+        }
+
+        public void addNewWeek(int totalHours) {
+            Workweek currentWeek = workweeks.get(workweeks.size() - 1);
+            currentWeek.addHours(totalHours);
+        }
+
+        public String getWorkweekDetails() {
+            StringBuilder result = new StringBuilder("- " + name + ":\n");
+
+            if (!workweeks.isEmpty()) {
+                Workweek lastWeek = workweeks.get(workweeks.size() - 1);
+                result.append("  ").append(lastWeek.toString()).append("\n");
+            }
+
+            int totalHoursAcrossWeeks = 0;
+
+            return result.toString();
+        }
+    }
+
+    private static class Workweek {
+        int totalHours;
+        int totalOvertime;
+        int overtimeMultFactor = 2;
+
+        public void addHours(int hours) {
+            if (hours > 40) {
+                totalHours += 40;
+                totalOvertime += hours - 40;
+            } else {
+                totalHours += hours;
+            }
+        }
+
+        public double calculateSalary(Employee employee) {
+            return (totalHours * employee.hourlySalary +
+                    overtimeMultFactor * totalOvertime * employee.hourlySalary);
+        }
+
+        public int getTotalHours() {
+            return totalHours;
+        }
+
+        @Override
+        public String toString() {
+            return "Week - Total hours: " + totalHours + ", Total overtime: " + totalOvertime +
+                    ", Total salary: " + calculateSalary(new Employee(0, "", 0));
         }
     }
 }
