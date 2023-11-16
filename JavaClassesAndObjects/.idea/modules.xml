@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Maps/BasicsMaps/BasicsMaps.iml" filepath="$PROJECT_DIR$/Maps/BasicsMaps/BasicsMaps.iml" />
       <module fileurl="file://$PROJECT_DIR$/Classes1/DogRanking.iml" filepath="$PROJECT_DIR$/Classes1/DogRanking.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaClassesAndObjects.iml" filepath="$PROJECT_DIR$/JavaClassesAndObjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Maps/Maps.iml" filepath="$PROJECT_DIR$/Maps/Maps.iml" />
       <module fileurl="file://$PROJECT_DIR$/ShapesAndPerimeters/ShapesAndPerimeters.iml" filepath="$PROJECT_DIR$/ShapesAndPerimeters/ShapesAndPerimeters.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimpleCalculator/SimpleCalculator.iml" filepath="$PROJECT_DIR$/SimpleCalculator/SimpleCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Maps/StateCapitals/StateCapitals.iml" filepath="$PROJECT_DIR$/Maps/StateCapitals/StateCapitals.iml" />
     </modules>
   </component>
 </project>
