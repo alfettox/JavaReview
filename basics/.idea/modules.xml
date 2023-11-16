@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ABeginning/ABeginning.iml" filepath="$PROJECT_DIR$/ABeginning/ABeginning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABeginning/Booleans/Booleans.iml" filepath="$PROJECT_DIR$/ABeginning/Booleans/Booleans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABeginning/Booleans/RandomObj/LlamasWhalesAndDodosOhMy/IfPractice.iml" filepath="$PROJECT_DIR$/ABeginning/Booleans/RandomObj/LlamasWhalesAndDodosOhMy/IfPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABeginning/Booleans/RandomObj/LlamasWhalesAndDodosOhMy/MiniZork/MiniZork.iml" filepath="$PROJECT_DIR$/ABeginning/Booleans/RandomObj/LlamasWhalesAndDodosOhMy/MiniZork/MiniZork.iml" />
       <module fileurl="file://$PROJECT_DIR$/ABeginning/ProjectGutemberg/ProjectGutemberg.iml" filepath="$PROJECT_DIR$/ABeginning/ProjectGutemberg/ProjectGutemberg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ABeginning/Booleans/RandomObj/RandomObj.iml" filepath="$PROJECT_DIR$/ABeginning/Booleans/RandomObj/RandomObj.iml" />
       <module fileurl="file://$PROJECT_DIR$/ABeginning/Scanner/Scanner.iml" filepath="$PROJECT_DIR$/ABeginning/Scanner/Scanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/basics.iml" filepath="$PROJECT_DIR$/basics.iml" />
     </modules>
