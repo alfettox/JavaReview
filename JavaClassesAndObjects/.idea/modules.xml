@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/ShapesAndPerimeters/ShapesAndPerimeters.iml" filepath="$PROJECT_DIR$/ShapesAndPerimeters/ShapesAndPerimeters.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimpleCalculator/SimpleCalculator.iml" filepath="$PROJECT_DIR$/SimpleCalculator/SimpleCalculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Maps/StateCapitals/StateCapitals.iml" filepath="$PROJECT_DIR$/Maps/StateCapitals/StateCapitals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserIO/UserIO.iml" filepath="$PROJECT_DIR$/UserIO/UserIO.iml" />
     </modules>
   </component>
 </project>
