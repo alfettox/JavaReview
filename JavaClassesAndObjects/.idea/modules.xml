@@ -3,10 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Classes1/DogRanking.iml" filepath="$PROJECT_DIR$/Classes1/DogRanking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FizzBuzz/FizzBuzz.iml" filepath="$PROJECT_DIR$/FizzBuzz/FizzBuzz.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaClassesAndObjects.iml" filepath="$PROJECT_DIR$/JavaClassesAndObjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Maps/Maps.iml" filepath="$PROJECT_DIR$/Maps/Maps.iml" />
       <module fileurl="file://$PROJECT_DIR$/RiskManagement/RiskManagement.iml" filepath="$PROJECT_DIR$/RiskManagement/RiskManagement.iml" />
       <module fileurl="file://$PROJECT_DIR$/maxProfit/maxProfit.iml" filepath="$PROJECT_DIR$/maxProfit/maxProfit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maxProfit2/maxProfit2.iml" filepath="$PROJECT_DIR$/maxProfit2/maxProfit2.iml" />
     </modules>
   </component>
 </project>
