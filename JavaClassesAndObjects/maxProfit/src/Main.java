@@ -20,7 +20,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int[] closingPrices = {7, 1, 5, 3, 6, 4};
+        int[] closingPrices = {10,20,13,24,9};
         int result = maxProfit(closingPrices);
         System.out.println("Maximum Profit: " + result);
     }

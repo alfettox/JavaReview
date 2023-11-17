@@ -6,7 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaClassesAndObjects.iml" filepath="$PROJECT_DIR$/JavaClassesAndObjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/Maps/Maps.iml" filepath="$PROJECT_DIR$/Maps/Maps.iml" />
       <module fileurl="file://$PROJECT_DIR$/RiskManagement/RiskManagement.iml" filepath="$PROJECT_DIR$/RiskManagement/RiskManagement.iml" />
-      <module fileurl="file://$PROJECT_DIR$/maxStockProfit/untitled.iml" filepath="$PROJECT_DIR$/maxStockProfit/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maxProfit/maxProfit.iml" filepath="$PROJECT_DIR$/maxProfit/maxProfit.iml" />
     </modules>
   </component>
 </project>
