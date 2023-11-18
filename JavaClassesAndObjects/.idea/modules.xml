@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlgoProbs/AlgoProbs.iml" filepath="$PROJECT_DIR$/AlgoProbs/AlgoProbs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DVDLibrary/DVDLibrary.iml" filepath="$PROJECT_DIR$/DVDLibrary/DVDLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Classes1/DogRanking.iml" filepath="$PROJECT_DIR$/Classes1/DogRanking.iml" />
       <module fileurl="file://$PROJECT_DIR$/FizzBuzz/FizzBuzz.iml" filepath="$PROJECT_DIR$/FizzBuzz/FizzBuzz.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaClassesAndObjects.iml" filepath="$PROJECT_DIR$/JavaClassesAndObjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Maps/Maps.iml" filepath="$PROJECT_DIR$/Maps/Maps.iml" />
       <module fileurl="file://$PROJECT_DIR$/RiskManagement/RiskManagement.iml" filepath="$PROJECT_DIR$/RiskManagement/RiskManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SwapValues/SwapValues.iml" filepath="$PROJECT_DIR$/SwapValues/SwapValues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SynchronizedDataStruct/SynchronizedDataStruct.iml" filepath="$PROJECT_DIR$/SynchronizedDataStruct/SynchronizedDataStruct.iml" />
+      <module fileurl="file://$PROJECT_DIR$/convertStringToInt/convertStringToInt.iml" filepath="$PROJECT_DIR$/convertStringToInt/convertStringToInt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/findMissingNumberArr/findMissingNumberArr.iml" filepath="$PROJECT_DIR$/findMissingNumberArr/findMissingNumberArr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/freq1Elements/freq1Elements.iml" filepath="$PROJECT_DIR$/freq1Elements/freq1Elements.iml" />
       <module fileurl="file://$PROJECT_DIR$/maxProfit/maxProfit.iml" filepath="$PROJECT_DIR$/maxProfit/maxProfit.iml" />
       <module fileurl="file://$PROJECT_DIR$/maxProfit2/maxProfit2.iml" filepath="$PROJECT_DIR$/maxProfit2/maxProfit2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/freq1Elements/returnUniqueElements/returnUniqueElements.iml" filepath="$PROJECT_DIR$/freq1Elements/returnUniqueElements/returnUniqueElements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/searchLibraryPagesWord/searchLibraryPagesWord.iml" filepath="$PROJECT_DIR$/searchLibraryPagesWord/searchLibraryPagesWord.iml" />
     </modules>
   </component>
 </project>
