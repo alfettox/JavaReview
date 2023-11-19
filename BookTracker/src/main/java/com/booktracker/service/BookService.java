@@ -2,13 +2,17 @@ package com.booktracker.service;
 
 import com.booktracker.dao.BookDao;
 import com.booktracker.dto.Book;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
-
+@Service
 public class BookService {
-    
-    private BookDao dao;
 
+    private final BookDao dao;
+
+    @Autowired
     public BookService(BookDao dao) {
         this.dao = dao;
     }

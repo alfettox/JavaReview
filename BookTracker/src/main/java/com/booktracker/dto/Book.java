@@ -1,7 +1,18 @@
 package com.booktracker.dto;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
 
+
+@Entity
 public class Book {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String title;
     private String author;
     private int year;
@@ -85,6 +96,9 @@ public class Book {
         }
         return true;
     }
-    
-    
+
+
+    public void setProperty(String value) {
+
+    }
 }

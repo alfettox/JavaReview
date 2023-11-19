@@ -1,13 +1,17 @@
 package com.booktracker.ui;
 
 import com.booktracker.dto.Book;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class BookView {
 
     private final UserIO io;
 
+    @Autowired
     public BookView(UserIO io) {
         this.io = io;
     }
@@ -18,13 +22,13 @@ public class BookView {
 
     public int displayMenuAndGetChoice() {
         io.print("");
-        io.print("Main Menu");
-        io.print("1. View Books");
-        io.print("2. View Book Details");
-        io.print("3. Add Book");
-        io.print("4. Update Book");
-        io.print("5. Delete Book");
-        io.print("6. Exit");
+        io.print("== MAIN MENU ==");
+        io.print("1 - View all the books");
+        io.print("2 - View book details");
+        io.print("3 - Add a book");
+        io.print("4 - Update book details");
+        io.print("5 - Delete book");
+        io.print("6 - Quit");
 
         return io.readInt("Please select an option:", 1, 6);
     }
@@ -34,13 +38,11 @@ public class BookView {
     }
 
     public void displayAllBooks(List<Book> books) {
-        io.print("");
-        io.print("All Books");
+        io.print("Collection of books");
         books.forEach(b -> io.print(b.getTitle() + " - " + b.getAuthor()));
     }
 
     public String getBookTitle() {
-        io.print("");
         return io.readString("Enter book name:");
     }
 
@@ -63,25 +65,23 @@ public class BookView {
     }
 
     public void displayAddSuccess() {
-        io.print("Book added successfully");
+        io.print("Book added");
     }
 
     public void displayExit() {
-        io.print("Exiting Book Tracker");
+        io.print("Exit");
     }
 
     public String getBookTitleToDelete() {
-        io.print("");
-        return io.readString("Enter book name to delete:");
+        return io.readString("Enter book title to delete:");
     }
 
     public void displayDeleteSuccess() {
-        io.print("Book deleted successfully");
+        io.print("Book deleted");
     }
 
     public String getBookTitleToUpdate() {
-        io.print("");
-        return io.readString("Enter book name to update:");
+        return io.readString("Enter book name to be updated:");
     }
 
     public Book getUpdateBook(Book updateBook) {
@@ -106,7 +106,7 @@ public class BookView {
         void update(String value);
     }
 
-    public void displayUpdateSuccess() {
-        io.print("Book updated successfully");
+    public void displayUpdated() {
+        io.print("Book updated ");
     }
 }

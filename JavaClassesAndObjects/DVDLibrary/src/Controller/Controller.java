@@ -1,33 +1,23 @@
 package Controller;
-
-import DAO.DAOFileImpl;
-import Service.ServiceImpl;
-import View.UserIO;
-import View.UserIOConsoleImpl;
-import View.View;
+import View.*;
+import Service.Service;
 
 public class Controller {
-    private UserIO io = new UserIOConsoleImpl();
-    private DAOFileImpl dao= new DAOFileImpl();
-    private Service srv = new ServiceImpl();
-    private View v = new View();
+    private ViewInt view;
+    private Service service;
+
+    // Constructor for dependency injection
+    public Controller(ViewInt view, Service service) {
+        this.view = view;
+        this.service = service;
+    }
 
     public void run(){
         boolean ct = true;
         int menuSelection = 0;
         while (ct){
-            io.print("MOVIE DATABASE");
-            io.print("1. Add a DVD ");
-            io.print("2. Remove a DVD ");
-            io.print("3. Edit a DVD ");
-            io.print("4. List DVD collection");
-            io.print("5. Display the information for a particular DVD");
-            io.print("6. Search for a DVD by title");
-            io.print("7. Load from persistent storage");
-            io.print("8. Save to persistent storage");
-            io.print("9. Quit");
 
-            menuSelection = io.readInt("Please enter your selection number", 1,9);
+            menuSelection = view.displayMenu();
 
             switch(menuSelection){
                 case 1:
@@ -58,42 +48,42 @@ public class Controller {
                     ct = false;
                     break;
                 default:
-                    io.print("INVALID INPUT");
+                    view.displayInvalidInput();
             }
         }
-    v.displayExitMessage();
+    view.displayExitMessage();
     }
 
     private void savePersist() {
-        srv.savePersist();
+        service.savePersist();
     }
 
     private void loadPersist() {
-        srv.loadPersist();
+        service.loadPersist();
     }
 
     private void displayDvd() {
-        srv.displayDvd();
+        service.displayDvd();
     }
 
     private void searchDvd() {
-        srv.searchDvd();
+        service.searchDvd();
     }
 
     private void listDvds() {
-        srv.listDvds();
+        service.listDvds();
     }
 
     private void editDvd() {
-        srv.editDvd();
+        service.editDvd();
     }
 
     private void removeDvd() {
-        srv.removeDvd();
+        service.removeDvd();
     }
 
     private void addDvd() {
-        srv.addDvd();
+        service.addDvd();
     }
 
 

@@ -13,4 +13,8 @@ public interface DAO {
     Movie getMovie(String title);
 
     Movie removeMovie(String title);
+
+    List<Movie> loadPersist();
+
+    void savePersist(List<Movie> movies);
 }

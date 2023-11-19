@@ -1,13 +1,11 @@
 package DTO;
 
-import java.util.Date;
-
-import static DTO.Movie.MPAARating.UNKNOWN;
+import java.util.Objects;
 
 public class Movie {
     private String title = "default_title";
-    private Date releaseDate;
-    private MPAARating mpaaRating = UNKNOWN;
+    private String releaseDate;
+    private String MPAARating = "UNKNOWN";
     private String director = "unknown_director";
     private String studio = "unknown_studio";
     private int userRating;
@@ -24,20 +22,20 @@ public class Movie {
         this.title = title;
     }
 
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 
-    public MPAARating getMpaaRating() {
-        return mpaaRating;
+    public String getMpaaRating(String pg) {
+        return MPAARating;
     }
 
-    public void setMpaaRating(MPAARating mpaaRating) {
-        this.mpaaRating = mpaaRating;
+    public void setMpaaRating(String string) {
+        this.MPAARating = string;
     }
 
     public String getDirector() {
@@ -64,7 +62,31 @@ public class Movie {
         this.userRating = userRating;
     }
 
-    public enum MPAARating{
+    public void addDvd(Movie m) {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Movie movie = (Movie) o;
+        return userRating == movie.userRating && title == movie.title && Objects.equals(releaseDate, movie.releaseDate) && MPAARating == movie.MPAARating && director == movie.director && studio == movie.studio;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, releaseDate, MPAARating, director, studio, userRating);
+    }
+
+    @Override
+    public String toString() {
+        return "MOVIE: " + getTitle() + ", "+
+                getReleaseDate() + ", " + getMpaaRating("PG") +
+                ", " + getDirector() + ", " + getStudio().toString() + ", "+
+                getUserRating();
+    }
+
+    public enum MPAARating {
         G,
         PG,
         PG13,

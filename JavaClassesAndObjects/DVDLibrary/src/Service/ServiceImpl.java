@@ -1,85 +1,92 @@
 package Service;
 
 import DAO.DAO;
-import DAO.DAOFileImpl;
 import DTO.Movie;
-import View.UserIO;
-import View.UserIOConsoleImpl;
-import View.View;
-
+import View.ViewInt;
 import java.util.Date;
+import DAO.DvdLibraryAuditDao;
 
-public class ServiceImpl implements Service{
-    UserIO io = new UserIOConsoleImpl();
-    View v = new View();
-    DAO dao = new DAOFileImpl();
+public class ServiceImpl implements Service {
+    private final DvdLibraryAuditDao auditDao;
+    private ViewInt view;
+    private DAO dao;
+
+    public ServiceImpl(ViewInt view, DAO dao, DvdLibraryAuditDao auditDao) {
+        this.view = view;
+        this.dao = dao;
+        this.auditDao = auditDao;
+    }
 
     @Override
     public void addDvd() {
-        v.displayBanner("ADD DVD");
+        view.displayBanner("ADD DVD");
 
-        String title = io.readString("Enter the movie title: ");
-        Date releaseDate = io.readDate("Enter the date");
-        Movie.MPAARating mpaaRating = Movie.MPAARating.valueOf(io.readString("Enter MPAA rating (G, PG, PG13, R, UNKNOWN"));
-        String director = io.readString("Enter the full director name");
-        String studio = io.readString("Enter the studio name");
-        int userRating = io.readInt("Enter the user rating (1-10)");
+        String title = view.getUserIO().readString("Enter the movie title: ");
+        Date releaseDate = view.getUserIO().readDate("Enter the date");
+        String string = view.getUserIO().readString("Enter MPAA rating (G, PG, PG13, R, UNKNOWN)");
+        String director = view.getUserIO().readString("Enter the full director name");
+        String studio = view.getUserIO().readString("Enter the studio name");
+        int userRating = view.getUserIO().readInt("Enter the user rating (1-10)");
 
-        Movie m = new Movie("title");
+        Movie m = new Movie(title);
         m.setReleaseDate(releaseDate);
-        m.setMpaaRating(mpaaRating);
+        m.setMpaaRating(string);
         m.setDirector(director);
         m.setStudio(studio);
         m.setUserRating(userRating);
 
-        dao.addMovie(title, m);
+        try {
+            dao.addMovie(title, m);
+        } catch (Exception e) {
+            view.displayError("An unexpected error occurred.");
+        }
     }
 
     @Override
     public void savePersist() {
-        v.displayBanner("SAVE TO DISK");
-
+        view.displayBanner("SAVE TO DISK");
+        // TODO: Implement savePersist logic
     }
 
     @Override
     public void loadPersist() {
-        v.displayBanner("LOAD FROM DISK");
-
+        view.displayBanner("LOAD FROM DISK");
+        // TODO: Implement loadPersist logic
     }
 
     @Override
     public void displayDvd() {
-        v.displayBanner("DISPLAY DVD");
-
+        view.displayBanner("DISPLAY DVD");
+        // TODO: Implement displayDvd logic
     }
 
     @Override
     public void searchDvd() {
-        v.displayBanner("SEARCH DVD");
-        String title = io.readString("Enter the exact title");
+        view.displayBanner("SEARCH DVD");
+        String title = view.getUserIO().readString("Enter the exact title");
         Movie retrievedMovie = dao.getMovie(title);
-        if (retrievedMovie != null){
-            v.displayInfo(retrievedMovie);
+        if (retrievedMovie != null) {
+            view.displayInfo(retrievedMovie);
         } else {
-            v.displayNotFound(title);
+            view.displayNotFound(title);
         }
     }
 
     @Override
     public void listDvds() {
-        v.displayBanner("LIST ALL DVDs");
-
+        view.displayBanner("LIST ALL DVDs");
+        // TODO: Implement listDvds logic
     }
 
     @Override
     public void editDvd() {
-        v.displayBanner("EDIT DVD");
-
+        view.displayBanner("EDIT DVD");
+        // TODO: Implement editDvd logic
     }
 
     @Override
     public void removeDvd() {
-        v.displayBanner("REMOVE DVD");
-
+        view.displayBanner("REMOVE DVD");
+        // TODO: Implement removeDvd logic
     }
 }

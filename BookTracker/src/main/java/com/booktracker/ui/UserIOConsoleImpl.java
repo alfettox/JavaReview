@@ -1,48 +1,16 @@
 package com.booktracker.ui;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Scanner;
 
+@Component
 public class UserIOConsoleImpl implements UserIO {
-
     Scanner sc = new Scanner(System.in);
 
     @Override
     public void print(String message) {
         System.out.println(message);
-    }
-
-    @Override
-    public double readDouble(String prompt) {
-        print(prompt);
-        return Double.parseDouble(sc.nextLine());
-    }
-
-    @Override
-    public double readDouble(String prompt, double min, double max) {
-        double num;
-        do {
-            print(prompt);
-            num = Double.parseDouble(sc.nextLine());
-        } while (num < min || num > max);
-
-        return num;
-    }
-
-    @Override
-    public float readFloat(String prompt) {
-        print(prompt);
-        return Float.parseFloat(sc.nextLine());
-    }
-
-    @Override
-    public float readFloat(String prompt, float min, float max) {
-        float num;
-        do {
-            print(prompt);
-            num = Float.parseFloat(sc.nextLine());
-        } while (num < min || num > max);
-
-        return num;
     }
 
     @Override
@@ -57,24 +25,6 @@ public class UserIOConsoleImpl implements UserIO {
         do {
             print(prompt);
             num = Integer.parseInt(sc.nextLine());
-        } while (num < min || num > max);
-
-        return num;
-    }
-
-    @Override
-    public long readLong(String prompt) {
-
-        print(prompt);
-        return Long.parseLong(sc.nextLine());
-    }
-
-    @Override
-    public long readLong(String prompt, long min, long max) {
-        long num;
-        do {
-            print(prompt);
-            num = Long.parseLong(sc.nextLine());
         } while (num < min || num > max);
 
         return num;

@@ -11,31 +11,33 @@ public class ViewIntImpl implements ViewInt {
     private UserIO io;
     private DAO dao;
 
-    public ViewIntImpl(UserIO io, DAO dao) {
+    // Constructor for dependency injection
+    public ViewIntImpl(UserIO io) {
         this.io = io;
-        this.dao = dao;
     }
-
     @Override
     public void addDvd(Movie movie) {
         displayBanner("ADD DVD");
 
         String title = io.readString("Enter the movie title: ");
         Date releaseDate = readValidDate("Enter the date (yyyy-MM-dd): ");
-        Movie.MPAARating mpaaRating = readValidMPAARating("Enter MPAA rating (G, PG, PG13, R, UNKNOWN): ");
+        String string = readValidMPAARating("Enter MPAA rating (G, PG, PG13, R, UNKNOWN): ");
         String director = io.readString("Enter the full director name");
         String studio = io.readString("Enter the studio name");
         int userRating = io.readInt("Enter the user rating (1-10)");
 
         Movie m = new Movie(title);
         m.setReleaseDate(releaseDate);
-        m.setMpaaRating(mpaaRating);
+        m.setMpaaRating(string);
         m.setDirector(director);
         m.setStudio(studio);
         m.setUserRating(userRating);
 
-        // Assuming there's a method like 'addDvd' in the Movie class, update accordingly
-        movie.addDvd(m);
+        try {
+            dao.addMovie(title, m);
+        } catch (Exception e) {
+            displayError("An unexpected error occurred.");
+        }
     }
 
     private Date readValidDate(String prompt) {
@@ -43,19 +45,22 @@ public class ViewIntImpl implements ViewInt {
             try {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 String dateString = io.readString(prompt);
+                System.out.println("Input Date: " + dateString);  // Print the input date
                 return dateFormat.parse(dateString);
             } catch (ParseException e) {
-                displayError("Invalid date format. Please enter the date in yyyy-MM-dd format.");
+                displayError("Error parsing the date. Please enter a valid date in the format yyyy-MM-dd.");
             }
         }
     }
 
-    private Movie.MPAARating readValidMPAARating(String prompt) {
+    private String readValidMPAARating(String prompt) {
         while (true) {
             try {
-                return Movie.MPAARating.valueOf(io.readString(prompt).toUpperCase());
+                String ratingInput = io.readString(prompt).toUpperCase();
+                System.out.println("Input MPAA Rating: " + ratingInput);  // Print the input rating
+                return ratingInput;
             } catch (IllegalArgumentException e) {
-                displayError("Invalid MPAA rating. Please enter a valid rating.");
+                displayError("Invalid MPAA rating. Please enter a valid rating (G, PG, PG13, R, UNKNOWN).");
             }
         }
     }
@@ -72,12 +77,7 @@ public class ViewIntImpl implements ViewInt {
         // TODO: Implement loadPersist logic
     }
 
-    @Override
-    public void displayBanner() {
-        io.print("===========");
-    }
-
-    private void displayBanner(String str) {
+    public void displayBanner(String str) {
         io.print(str);
     }
 
@@ -119,15 +119,49 @@ public class ViewIntImpl implements ViewInt {
     }
 
     // Implement these methods based on your requirements
-    private void displayInfo(Movie movie) {
+    public void displayInfo(Movie movie) {
         // TODO: Implement displayInfo logic
     }
 
-    private void displayNotFound(String title) {
+    public void displayNotFound(String title) {
         // TODO: Implement displayNotFound logic
     }
 
-    private void displayError(String message) {
-        // TODO: Implement displayError logic
+    @Override
+    public void displayExitMessage() {
+
     }
+
+    @Override
+    public void displayInvalidInput() {
+
+    }
+
+    @Override
+    public UserIO getUserIO() {
+        return io;
+    }
+
+    public void displayError(String message) {
+        io.print(message);
+    }
+
+    @Override
+    public int displayMenu() {
+        io.print("MOVIE DATABASE");
+        io.print("1. Add a DVD ");
+        io.print("2. Remove a DVD ");
+        io.print("3. Edit a DVD ");
+        io.print("4. List DVD collection");
+        io.print("5. Display the information for a particular DVD");
+        io.print("6. Search for a DVD by title");
+        io.print("7. Load from persistent storage");
+        io.print("8. Save to persistent storage");
+        io.print("9. Quit");
+
+        return io.readInt("Please enter your selection number", 1,9);
+
+    }
+
+
 }

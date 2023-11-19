@@ -14,6 +14,5 @@ public interface UserIO {
     long readLong(String prompt);
     long readLong(String prompt, String min, String max);
     String readString(String prompt);
-
     Date readDate(String enterTheDate);
 }
