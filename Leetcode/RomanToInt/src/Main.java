@@ -16,7 +16,8 @@ public class Main {
         map.put('X', 10);
         map.put('V', 5);
         map.put('I', 1);
-
+//    IV  -> 4
+//    VI  -> 6
         int res = 0;
         for (int i = 0; i < s.length() - 1; i++) {
             if (map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {

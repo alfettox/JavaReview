@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AddTwoNumbers/AddTwoNumbers.iml" filepath="$PROJECT_DIR$/AddTwoNumbers/AddTwoNumbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GroupAnagram/GroupAnagram.iml" filepath="$PROJECT_DIR$/GroupAnagram/GroupAnagram.iml" />
       <module fileurl="file://$PROJECT_DIR$/Leetcode.iml" filepath="$PROJECT_DIR$/Leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LengthLastWord/LengthLastWord.iml" filepath="$PROJECT_DIR$/LengthLastWord/LengthLastWord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MajorityElem/MajorityElem.iml" filepath="$PROJECT_DIR$/MajorityElem/MajorityElem.iml" />
       <module fileurl="file://$PROJECT_DIR$/MaxSubarray/MaxSubarray.iml" filepath="$PROJECT_DIR$/MaxSubarray/MaxSubarray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NumberOfIslands/NumberOfIslands.iml" filepath="$PROJECT_DIR$/NumberOfIslands/NumberOfIslands.iml" />
       <module fileurl="file://$PROJECT_DIR$/PalindromeNum/PalindromeNum.iml" filepath="$PROJECT_DIR$/PalindromeNum/PalindromeNum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RemoveElement/RemoveElement.iml" filepath="$PROJECT_DIR$/RemoveElement/RemoveElement.iml" />
       <module fileurl="file://$PROJECT_DIR$/RomanToInt/RomanToInt.iml" filepath="$PROJECT_DIR$/RomanToInt/RomanToInt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Subsets/Subsets.iml" filepath="$PROJECT_DIR$/Subsets/Subsets.iml" />
       <module fileurl="file://$PROJECT_DIR$/TwoSum/TwoSum.iml" filepath="$PROJECT_DIR$/TwoSum/TwoSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/containsDuplicates/containsDuplicates.iml" filepath="$PROJECT_DIR$/containsDuplicates/containsDuplicates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/removeDupSortedArray/removeDupSortedArray.iml" filepath="$PROJECT_DIR$/removeDupSortedArray/removeDupSortedArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/validAnagram/validAnagram.iml" filepath="$PROJECT_DIR$/validAnagram/validAnagram.iml" />
     </modules>
   </component>
 </project>
